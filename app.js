@@ -211,7 +211,17 @@
 
 ////21-masala
 ////21. Sonning raqamlari yig'indisini hisoblab beradigan digitSum() funksiya yozing. (rekursiv funksiya)
-
+// let son = 13;
+// let counter = 0;
+// function calc() {
+//   counter += son;
+//   son--;
+//   if (0 < son) {
+//     calc();
+//   }
+// }
+// calc();
+// console.log(counter);
 ////22-masala
 ////22. Quyidagi pupils massividagi barcha o'quvchilarni protcentlarining o'rtacha qiymatini toping. (reduce)
 // const pupils = [
@@ -289,39 +299,50 @@
 // });
 // console.log(score);
 
-////24- masala
+////24- masala va 25-masala
 ////24. isPassed propertyga protcent 70 dan o'tsa true, aks holda false qiymat o'zlashtirilsin. (map)
-const pupils = [
-  {
-    name: "Elbek",
-    protcent: 95,
-  },
-  {
-    name: "Zafar",
-    protcent: 78,
-  },
-  {
-    name: "Aziz",
-    protcent: 83,
-  },
-  {
-    name: "Jasur",
-    protcent: 88,
-  },
-  {
-    name: "Bobur",
-    protcent: 66,
-  },
-  {
-    name: "Kamron",
-    protcent: 75,
-  },
-];
-const isPassed = pupils.map((student) => {
-  if (student.protcent >= 70) {
-    return true;
-  } else {
-    return false;
-  }
-});
-console;
+////25. Necha kishi imtihondan o'tdi va necha kishi imtihonda o'ta olmadi shuni ham hisoblang. (reduce)
+// const pupils = [
+//   {
+//     name: "Elbek",
+//     protcent: 95,
+//   },
+//   {
+//     name: "Zafar",
+//     protcent: 68,
+//   },
+//   {
+//     name: "Aziz",
+//     protcent: 83,
+//   },
+//   {
+//     name: "Jasur",
+//     protcent: 88,
+//   },
+//   {
+//     name: "Bobur",
+//     protcent: 66,
+//   },
+//   {
+//     name: "Kamron",
+//     protcent: 65,
+//   },
+// ];
+// const isPassed = pupils
+//   .map((student) => {
+//     return { ...student, isPassed: student.protcent > 70 };
+//   })
+//   .reduce(
+//     (acc, curVal) => {
+//       curVal.isPassed
+//         ? (acc.passed = acc.passed + 1)
+//         : (acc.failed = acc.failed + 1);
+//       return acc;
+//     },
+//     {
+//       passed: 0,
+//       failed: 0,
+//     }
+//   );
+
+// console.log(isPassed);
