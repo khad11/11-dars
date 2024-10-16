@@ -165,7 +165,19 @@
 // console.log(deleteProduct);
 //// 16-masala
 /////16. Berilgan satrni faqatgina harflardan iborat ekanligiga tekshiring (split, every)
-//// otilmagan mavzu!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// const text = "mening ismim Muhammadqodir";
+// // const text = "men 20 yoshdaman "
+// const result = text
+//   .split(" ")
+//   .join("")
+//   .split("")
+//   .every((el) => {
+//     const string = new String(el).charCodeAt();
+//     if ((string >= 65 && string <= 90) || (string >= 97 && string <= 122)) {
+//       return true;
+//     }
+//   });
+// console.log(result);
 //// 17-masala
 ////17. Massiv truthy va falsy elementlardan tuzilgan. O’sha massivdagi truthy va falsy elementlarni alohida massivlarga ajratib object qilib qaytaruvchi getTruthyFalsy funksiya tuzing. (filter)
 // function getTruthyFalsy(arr) {
@@ -190,5 +202,126 @@
 
 ////20-masala
 ////20. Objectning kalit va qiymatlarining string ko'rinishidagi yig'indisidan iborat massiv qaytaring. (Object.entries, map, join)
-const num = { a: 2, b: 5, c: 7 };
-cons;
+// const num = { a: 2, b: 5, c: 7 };
+
+// const result = Object.entries(num)
+//   .map(([key, value]) => `'${key}: ${value}'`)
+//   .join(", ");
+// console.log(result);
+
+////21-masala
+////21. Sonning raqamlari yig'indisini hisoblab beradigan digitSum() funksiya yozing. (rekursiv funksiya)
+
+////22-masala
+////22. Quyidagi pupils massividagi barcha o'quvchilarni protcentlarining o'rtacha qiymatini toping. (reduce)
+// const pupils = [
+//   {
+//     name: "Elbek",
+//     protcent: 95,
+//   },
+//   {
+//     name: "Zafar",
+//     protcent: 78,
+//   },
+//   {
+//     name: "Aziz",
+//     protcent: 83,
+//   },
+//   {
+//     name: "Jasur",
+//     protcent: 88,
+//   },
+//   {
+//     name: "Bobur",
+//     protcent: 66,
+//   },
+//   {
+//     name: "Kamron",
+//     protcent: 75,
+//   },
+// ];
+
+// const totalSum = pupils.reduce((acc, curVal) => acc + curVal.protcent, 0);
+// const avgNum = totalSum / pupils.length;
+// console.log(avgNum);
+
+////23-masala
+////23. grade propertyga protcent 90-100 o'rtasida bo'lsa 5, 80-90 o'rtasida bo'lsa 4, 70-80 o'rtasida bo'lsa 3 bahoni, qolgan holatlarda 2 bahoni o'zlashtiring.(map)
+
+// const pupils = [
+//   {
+//     name: "Elbek",
+//     protcent: 95,
+//   },
+//   {
+//     name: "Zafar",
+//     protcent: 78,
+//   },
+//   {
+//     name: "Aziz",
+//     protcent: 83,
+//   },
+//   {
+//     name: "Jasur",
+//     protcent: 88,
+//   },
+//   {
+//     name: "Bobur",
+//     protcent: 66,
+//   },
+//   {
+//     name: "Kamron",
+//     protcent: 75,
+//   },
+// ];
+// const score = pupils.map((student) => {
+//   if (student.protcent > 90 && student.protcent <= 100) {
+//     return { ...student, grade: 5 };
+//   }
+//   if (student.protcent > 80 && student.protcent <= 90) {
+//     return { ...student, grade: 4 };
+//   }
+//   if (student.protcent > 70 && student.protcent <= 80) {
+//     return { ...student, grade: 3 };
+//   } else {
+//     return { ...student, grade: 2 };
+//   }
+// });
+// console.log(score);
+
+////24- masala
+////24. isPassed propertyga protcent 70 dan o'tsa true, aks holda false qiymat o'zlashtirilsin. (map)
+const pupils = [
+  {
+    name: "Elbek",
+    protcent: 95,
+  },
+  {
+    name: "Zafar",
+    protcent: 78,
+  },
+  {
+    name: "Aziz",
+    protcent: 83,
+  },
+  {
+    name: "Jasur",
+    protcent: 88,
+  },
+  {
+    name: "Bobur",
+    protcent: 66,
+  },
+  {
+    name: "Kamron",
+    protcent: 75,
+  },
+];
+const isPassed = pupils.map((student) => {
+  if (student.protcent >= 70) {
+    return true;
+  } else {
+    return false;
+  }
+});
+console;
